@@ -53,39 +53,39 @@ draw_scales_y(scalar_y,25)
 
 
     
-##scale=5
-##grapher.speed(0)
-##draw_axis(grapher,1.2,50)
-##if r=="v":
-##    y=[]
-##    with open(s,"r") as file:
-##        run=True
-##        while run:
-##            c=file.readline()
-##            if c=="":
-##                run=False
-##            else:
-##                cont=c.split(" ")
-##                y.append(cont[0])
-##   
-##else:
-##    y=[]
-##    with open(s,"r") as file:
-##        run=True
-##        while run:
-##            c=file.readline()
-##            if c=="":
-##                run=False
-##            else:
-##                cont=c.split(" ")
-##                y.append(cont[1])
-##    pass
-##turtle.home()
-##turtle.setpos(1.2,0.1*scale)
-##for i in range(len(y)):
-##    posn=((i+2)*1.2,float(y[i])*scale)
-##    turtle.setpos(posn)
-##turtle.ht()
+scale=5
+grapher.speed(0)
+##draw_axis(grapher)
+if r=="v":
+    y=[]
+    with open(s,"r") as file:
+        run=True
+        while run:
+            c=file.readline()
+            if c=="":
+                run=False
+            else:
+                cont=c.split(" ")
+                y.append(cont[0])
+   
+else:
+    y=[]
+    with open(s,"r") as file:
+        run=True
+        while run:
+            c=file.readline()
+            if c=="":
+                run=False
+            else:
+                cont=c.split(" ")
+                y.append(cont[1])
+    pass
+turtle.home()
+turtle.setpos(1.2,0.1*scale)
+for i in range(len(y)):
+    posn=((i+2)*1.2,float(y[i])*scale)
+    turtle.setpos(posn)
+turtle.ht()
 
 
 
